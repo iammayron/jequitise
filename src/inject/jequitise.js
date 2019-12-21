@@ -10,8 +10,8 @@
     }
 
     const loop = () => {
-        let min = 5000
-        let max = 15000
+        let min = 60000
+        let max = 240000
         let rand = Math.ceil(Math.random() * (max - min)) + min
         setTimeout(function(){
             jequitise()
