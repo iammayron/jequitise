@@ -1,38 +1,38 @@
 {
-  "name": "Jequitise",
-  "version": "1.0",
-  "manifest_version": 2,
-  "description": "Chrome extension to show Jequiti background randomly.",
-  "homepage_url": "https://github.com/mayroonalves/jequitise",
-  "author": "Mayron Alves",
-  "short_name": "Jequitise",
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },  
-  "background": {
-    "scripts": [
-      "src/bg/background.js"
+    "name": "Jequitise",
+    "version": "1.2",
+    "manifest_version": 2,
+    "description": "Chrome extension to show Jequiti background randomly.",
+    "homepage_url": "https://github.com/mayroonalves/jequitise",
+    "author": "Mayron Alves",
+    "short_name": "Jequitise",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "background": {
+        "scripts": [
+            "src/bg/background.js"
+        ],
+        "persistent": true
+    },
+    "page_action": {
+        "default_icon": "icons/icon19.png"
+    },
+    "permissions": [
+        "contentSettings"
     ],
-    "persistent": true
-  },
-  "page_action": {
-    "default_icon": "icons/icon19.png"    
-  },
-  "permissions": [
-    "contentSettings"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "js": [
-        "js/jquery/jquery.min.js",
-        "src/inject/jequitise.js"
-      ]
-    }
-  ]
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "js/jquery/jquery.min.js",
+                "src/inject/jequitise.js"
+            ]
+        }
+    ]
 }
